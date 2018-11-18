@@ -39,12 +39,18 @@ class App extends Component {
     // allows changes to this.state; state updates are merged w/ original object
     this.setState({ newTodoDescription: e.target.value });
   }
+  deleteTodo(index){
+    // I need to be making sure I am not changing this.state directly, but saving it as something new, and usable by setState to replace the old this.state, and also being mindful of scope
+    const deleted = this.state.todos[index];
+    const todos = this.state.todos.filter(x => x !== deleted);
+    this.setState({ todos: todos });
+  }
   render() {
     return (
       <div className="App">
         <ul>
         { this.state.todos.map( (todo, index) =>
-          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
+          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } deleteTodo={ () => this.deleteTodo(index) } />
         )}
         </ul>
         <form onSubmit={ (e) => this.handleSubmit(e) }>
