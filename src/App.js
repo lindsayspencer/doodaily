@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 // import our new component from another file
 import ToDo from './components/ToDo.js';
+import Total from './components/Total.js'
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
       todos: [
-        { description: "Walk the Cat", isCompleted: true },
-        { description: "Throw the dishes away", isCompleted: false },
-        { description: "Buy New Dishes", isCompleted: false }
+        { description: "Start tracking your todos!", isCompleted: false }
       ],
-      newTodoDescription: ""
+      newTodoDescription: "",
+      completedCount: 0,
+      encouragement: "Keep up the good work!",
     };
   }
   toggleComplete(index){
@@ -23,8 +24,10 @@ class App extends Component {
     const todo = todos[index];
     // use of conditional/ternary operator to flip the state -> condition ? exprT : exprF
     todo.isCompleted = todo.isCompleted ? false : true;
+    // creating new array of only completed items
+    const completedCount = this.state.todos.filter(element => element.isCompleted === true);
     // setState() allows change to this.state
-    this.setState({ todos: todos });
+    this.setState({ todos: todos, newTodoDescription: "", completedCount: completedCount.length });
   }
   handleSubmit(e){
     // keeps page from reloading
@@ -43,19 +46,32 @@ class App extends Component {
     // I need to be making sure I am not changing this.state directly, but saving it as something new, and usable by setState to replace the old this.state, and also being mindful of scope
     const deleted = this.state.todos[index];
     const todos = this.state.todos.filter(x => x !== deleted);
-    this.setState({ todos: todos });
+    // fixes bug so completedCount goes back down when items are deleted
+    const completedCount = this.state.todos.filter(element => element.isCompleted === true && element !== deleted);
+    this.setState({ todos: todos, newTodoDescription: "", completedCount: completedCount.length });
+  }
+  // trying to change encouragement text NOT APPLIED
+  encourage(){
+    if(this.state.completedCount === 0){
+      return "Time to start the day!";
+    } else if(this.state.completedCount <= 3){
+      return "Great job! What's next?";
+    } else {
+      return "Awesome job today!";
+    }
   }
   render() {
     return (
       <div className="App">
+        <Total completedCount={ this.state.completedCount } todoCount={ this.state.todos.length } encouragement={ this.state.encouragement } />
         <ul>
         { this.state.todos.map( (todo, index) =>
           <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } deleteTodo={ () => this.deleteTodo(index) } />
         )}
         </ul>
-        <form onSubmit={ (e) => this.handleSubmit(e) }>
-          <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } />
-          <input type="submit" />
+        <form onSubmit={ (e) => this.handleSubmit(e) } class="new-item-form">
+          <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } class="new-item-text" />
+          <input type="submit" value="Add +" class="new-item-submit" />
         </form>
       </div>
     );

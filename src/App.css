@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: left;
+  width: 300px;
 }
 
 .App-logo {
@@ -29,4 +30,67 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* list styling */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li:nth-child(odd) {
+  background-color: pink;
+  padding: 10px;
+}
+
+li:nth-child(even) {
+  background-color: gainsboro;
+  padding: 10px;
+}
+
+/* checkbox styling */
+input[type=checkbox] {
+ margin-right: 15px;
+}
+
+/* delete button styling */
+.delete-item {
+  background-color: teal;
+  color: #fff;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0);
+  margin-left: 30px;
+}
+
+.delete-item:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+/* submit input styling */
+.new-item-form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: teal;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.new-item-text {
+  background-color: #fff;
+  line-height: 2em;
+  border: none;
+  border-radius: 5px;
+}
+
+.new-item-submit {
+  background-color: teal;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 8px 10px;
+}
+
+.new-item-submit:hover {
+  border-color: pink;
 }
