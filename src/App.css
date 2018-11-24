@@ -1,6 +1,11 @@
 .App {
   text-align: left;
   width: 300px;
+  margin: 50px auto;
+  background-color: rgba(128, 178, 122, 0.8);
+  padding: 50px 50px 5px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .App-logo {
@@ -30,6 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+
+}
+
+p {
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* list styling */
@@ -38,13 +52,21 @@ ul {
   padding-left: 0;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
+li:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 li:nth-child(odd) {
-  background-color: pink;
+  background-color: rgba(230, 102, 80, 1.0);
   padding: 10px;
 }
 
 li:nth-child(even) {
-  background-color: gainsboro;
+  background-color: rgba(254, 154, 92, 1.0);
   padding: 10px;
 }
 
@@ -55,24 +77,25 @@ input[type=checkbox] {
 
 /* delete button styling */
 .delete-item {
-  background-color: teal;
-  color: #fff;
+  background-color: rgba(254, 154, 92, 0.0);
+  color: #000;
   border-radius: 5px;
-  border-color: rgba(255, 255, 255, 0);
-  margin-left: 30px;
+  border: 1.5px solid #000;
+  display: block;
+  margin:  5px auto;
 }
 
 .delete-item:hover {
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0,0,0,0.19);
 }
 
 /* submit input styling */
 .new-item-form {
   width: 80%;
-  margin: 0 auto;
-  background-color: teal;
-  border-radius: 5px;
-  padding: 10px;
+  margin: 50px auto;
+  padding: 20px;
+  /*border-top: 2px solid grey;*/
+
 }
 
 .new-item-text {
@@ -83,14 +106,22 @@ input[type=checkbox] {
 }
 
 .new-item-submit {
-  background-color: teal;
+  background-color: rgba(92, 118, 121, 1.0);
   color: #fff;
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 5px;
-  margin: 10px;
-  padding: 8px 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 40px;
+  margin-left: 25px;
+  padding: 10px;
 }
 
 .new-item-submit:hover {
-  border-color: pink;
+  background-color: rgba(230, 102, 80, 0.7);
+}
+
+/* signature styling */
+#signature {
+  text-align: center;
 }

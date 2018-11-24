@@ -63,16 +63,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>To Dos</h1>
         <Total completedCount={ this.state.completedCount } todoCount={ this.state.todos.length } encouragement={ this.state.encouragement } />
+
         <ul>
         { this.state.todos.map( (todo, index) =>
           <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } deleteTodo={ () => this.deleteTodo(index) } />
         )}
         </ul>
+
         <form onSubmit={ (e) => this.handleSubmit(e) } class="new-item-form">
           <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } class="new-item-text" />
-          <input type="submit" value="Add +" class="new-item-submit" />
+          <input type="submit" value="+" class="new-item-submit" />
         </form>
+        <p id="signature"><i class="icon ion-logo-twitter"></i> @lindscatspencer • <a href="https://reactjs.org/">React.js</a></p>
       </div>
     );
   }

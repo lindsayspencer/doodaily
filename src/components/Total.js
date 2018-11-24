@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 class Total extends Component {
   render(){
     return (
-      <p>{ this.props.completedCount } out of { this.props.todoCount } completed! { this.props.encouragement }</p>
+      <h3><i className="ion ion-md-checkmark-circle"></i>  { this.props.completedCount } / { this.props.todoCount }</h3>
     );
   }
 }
