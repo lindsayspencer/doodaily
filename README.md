@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Check out [my app](public/index.html)
+Check out [my app](src/index.js)
 
 ## Learn More
 
