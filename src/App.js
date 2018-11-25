@@ -63,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>To Dos</h1>
+        <h1>To-Dos</h1>
         <Total completedCount={ this.state.completedCount } todoCount={ this.state.todos.length } encouragement={ this.state.encouragement } />
 
         <ul>
