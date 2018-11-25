@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-// import our new component from another file
-import ToDo from './components/ToDo.js';
-import Total from './components/Total.js'
+import ToDo from './ToDo.js';
+import Total from './Total.js';
 
-class App extends Component {
+class MyList extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -62,9 +60,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <header><h1 className="name close"><i className="ion ion-md-checkmark-circle"></i> Doodaily  </h1> <h3 className="close">Your to-dos for the day.</h3></header>
-      <section className="todos-container">
+
+
+        <section className="todo-container">
         <h1>To-Dos</h1>
         <Total completedCount={ this.state.completedCount } todoCount={ this.state.todos.length } encouragement={ this.state.encouragement } />
 
@@ -75,14 +73,14 @@ class App extends Component {
         </ul>
 
         <form onSubmit={ (e) => this.handleSubmit(e) } class="new-item-form">
-          <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } className="new-item-text" />
-          <input type="submit" value="+" className="new-item-submit" />
+          <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } class="new-item-text" />
+          <input type="submit" value="+" class="new-item-submit" />
         </form>
-        <p id="signature"><i className="icon ion-logo-twitter"></i> @lindscatspencer • <a href="https://reactjs.org/">React.js</a></p>
-      </section>
-      </div>
+        <p id="signature"><i class="icon ion-logo-twitter"></i> @lindscatspencer • <a href="https://reactjs.org/">React.js</a></p>
+        </section>
+
     );
   }
 }
 
-export default App;
+export default MyList;

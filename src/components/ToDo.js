@@ -9,8 +9,12 @@ class ToDo extends Component {
   render(){
     return (
       <li> <input type="checkbox" checked={ this.props.isCompleted } onChange={ this.props.toggleComplete } />
-      <span>{ this.props.description }</span>
-      <input type="button" value="delete" onClick={ this.props.deleteTodo } class="delete-item" />
+      <span style={this.props.isCompleted ? {textDecoration:"line-through"} : {textDecoration: "none"}}>{ this.props.description }</span>
+      <div className="btn-inline">
+      
+      <button className="delete-item" onClick={ this.props.toggleComplete }><i className="ion ion-md-checkmark"></i> </button>
+      <button className="delete-item" onClick={ this.props.deleteTodo }><i className="ion ion-md-trash"></i> </button>
+      </div>
       </li>
     );
   }
