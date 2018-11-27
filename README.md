@@ -2,7 +2,10 @@
 
 > by @lindscatspencer (twitter) / @lindsayspencer (github)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app | ).
+
+<img src="./img/screenshot1.JPG" alt="screenshot 1 of Doodaily" width="200px" height="auto">
+<img src="./img/screenshot2.JPG" alt="screenshot 2 of Doodaily" width="200px" height="auto">
 
 ![screenshot 1 of Doodaily](./img/screenshot1.JPG) ![screenshot 2 of Doodaily](./img/screenshot2.JPG)
 
