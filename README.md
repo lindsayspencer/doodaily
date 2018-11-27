@@ -7,8 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img src="./img/screenshot1.JPG" alt="screenshot 1 of Doodaily" width="200px" height="auto">
 <img src="./img/screenshot2.JPG" alt="screenshot 2 of Doodaily" width="200px" height="auto">
 
-![screenshot 1 of Doodaily](./img/screenshot1.JPG) ![screenshot 2 of Doodaily](./img/screenshot2.JPG)
-
 ## Project Overview
 
 Doodaily is the first web app I created using the JavaScript framework React.js, which uses ECMAScript 6 classes to establish inheritance between components and to ensure a one-way data flow. The app's functionality includes:
