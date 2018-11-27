@@ -12,15 +12,15 @@ Doodaily is the first web app I created using the JavaScript framework React.js,
 
 - Tracking the number of completed to-do items out of total number of items
 
-![screenshot of to-do item tracking](img/screenshot6.jpg)
+![screenshot of to-do item tracking](./img/screenshot6.jpg)
 
 - Items can be either or marked as completed or deleted. Items that are completed become crossed out.
 
-![screenshot of to-do action buttons](img/screenshot7.jpg)
+![screenshot of to-do action buttons](./img/screenshot7.jpg)
 
 - New items can be added with the submit form at the bottom
 
-![screenshot of add to-do item](img/screenshot4.jpg)
+![screenshot of add to-do item](./img/screenshot4.jpg)
 
 ## Notes
 
