@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-(screenshots 1 & 2)
+![screenshot 1 of Doodaily](./img/screenshot1.JPG) ![screenshot 2 of Doodaily](./img/screenshot2.JPG)
 
 ## Project Overview
 
